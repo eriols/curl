@@ -294,8 +294,8 @@ typedef enum {
 struct curl_fileinfo {
   char *filename;
   curlfiletype filetype;
-  time_t time; /* always zero! */
   unsigned int perm;
+  time_t time; /* always zero! */
   int uid;
   int gid;
   curl_off_t size;
