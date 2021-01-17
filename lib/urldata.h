@@ -377,8 +377,8 @@ struct ntlmdata {
 #else
   unsigned int flags;
   unsigned char nonce[8];
-  void *target_info; /* TargetInfo received in the ntlm type-2 message */
   unsigned int target_info_len;
+  void *target_info; /* TargetInfo received in the ntlm type-2 message */
 
 #if defined(NTLM_WB_ENABLED)
   /* used for communication with Samba's winbind daemon helper ntlm_auth */
