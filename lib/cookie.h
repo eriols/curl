@@ -34,12 +34,12 @@ struct Cookie {
   char *domain;      /* domain = <this> */
   curl_off_t expires;  /* expires = <this> */
   char *expirestr;   /* the plain text version */
-  bool tailmatch;    /* whether we do tail-matching of the domain name */
 
   /* RFC 2109 keywords. Version=1 means 2109-compliant cookie sending */
   char *version;     /* Version = <value> */
   char *maxage;      /* Max-Age = <value> */
 
+  bool tailmatch;    /* whether we do tail-matching of the domain name */
   bool secure;       /* whether the 'secure' keyword was used */
   bool livecookie;   /* updated from a server, not a stored file */
   bool httponly;     /* true if the httponly directive is present */
