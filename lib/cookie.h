@@ -61,8 +61,8 @@ struct CookieInfo {
   struct Cookie *cookies[COOKIE_HASH_SIZE];
 
   char *filename;  /* file we read from/write to */
-  bool running;    /* state info, for cookie adding information */
   long numcookies; /* number of cookies in the "jar" */
+  bool running;    /* state info, for cookie adding information */
   bool newsession; /* new session, discard session cookies on load */
   int lastct;      /* last creation-time used in the jar */
 };
