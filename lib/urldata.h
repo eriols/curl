@@ -1906,6 +1906,7 @@ struct Curl_easy {
   int actions[MAX_SOCKSPEREASYHANDLE]; /* action for each socket in
                                           sockets[] */
   int numsocks;
+  unsigned int magic;          /* set to a CURLEASY_MAGIC_NUMBER */
 
   struct Names dns;
   struct Curl_multi *multi;    /* if non-NULL, points to the multi handle
@@ -1948,7 +1949,6 @@ struct Curl_easy {
 #ifdef USE_HYPER
   struct hyptransfer hyp;
 #endif
-  unsigned int magic;          /* set to a CURLEASY_MAGIC_NUMBER */
 };
 
 #define LIBCURL_NAME "libcurl"
