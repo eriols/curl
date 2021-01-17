@@ -1008,13 +1008,14 @@ struct connectdata {
 #endif
   struct ConnectBits bits;    /* various state-flags for this connection */
 
+  /* The field below gets set in Curl_connecthost */
+  int num_addr; /* number of addresses to try to connect to */
  /* connecttime: when connect() is called on the current IP address. Used to
     be able to track when to move on to try next IP - but only when the multi
     interface is used. */
   struct curltime connecttime;
-  /* The two fields below get set in Curl_connecthost */
-  int num_addr; /* number of addresses to try to connect to */
 
+  /* The field below gets set in Curl_connecthost */
   /* how long time in milliseconds to spend on trying to connect to each IP
      address, per family */
   timediff_t timeoutms_per_addr[2];
