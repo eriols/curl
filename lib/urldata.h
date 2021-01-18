@@ -526,8 +526,8 @@ struct hostname {
 struct Curl_async {
   char *hostname;
   int port;
-  struct Curl_dns_entry *dns;
   int status; /* if done is TRUE, this is the status from the callback */
+  struct Curl_dns_entry *dns;
   struct thread_data *tdata;
   BIT(done);  /* set TRUE when the lookup is complete */
 };
