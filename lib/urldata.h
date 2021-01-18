@@ -631,6 +631,7 @@ struct SingleRequest {
                                    Content-Range: header */
   int httpcode;                 /* error code from the 'HTTP/1.? XXX' or
                                    'RTSP/1.? XXX' line */
+  int keepon;
   struct curltime start100;      /* time stamp to wait for the 100 code from */
   enum expect100 exp100;        /* expect 100 continue state */
   enum upgrade101 upgr101;      /* 101 upgrade state */
@@ -639,7 +640,6 @@ struct SingleRequest {
   struct contenc_writer *writer_stack;
   time_t timeofdoc;
   long bodywrites;
-  int keepon;
   char *location;   /* This points to an allocated version of the Location:
                        header data */
   char *newurl;     /* Set to the new URL to use when a redirect or a retry is
