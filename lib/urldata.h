@@ -587,8 +587,8 @@ struct dohdata {
   struct curl_slist *headers;
   struct dnsprobe probe[DOH_PROBE_SLOTS];
   unsigned int pending; /* still outstanding requests */
-  const char *host;
   int port;
+  const char *host;
 };
 
 /*
